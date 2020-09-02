@@ -28,7 +28,7 @@
 ##
 ## Remove the leading # first to enable this; lines starting with # are ignored.
 
-server_names = ['safesurfer-dnscrypt']
+server_names = ['cloudflare-security']
 
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
@@ -200,7 +200,7 @@ cert_refresh_delay = 240
 ##
 ## If more than one resolver is specified, they will be tried in sequence.
 
-fallback_resolver = '185.228.168.168:53'
+fallback_resolver = '1.1.1.1:53'
 
 
 ## Always use the fallback resolver before the system DNS settings.
@@ -226,7 +226,7 @@ netprobe_timeout = 60
 ## On other operating systems, the connection will be initialized
 ## but nothing will be sent at all.
 
-netprobe_address = '185.228.168.168:53'
+netprobe_address = '1.1.1.1:53'
 
 
 ## Offline mode - Do not use any remote encrypted servers.
@@ -679,7 +679,7 @@ fragments_blocked = ['cisco', 'cisco-ipv6', 'cisco-familyshield', 'cisco-familys
 ## recommended. If you do so, keep "server_names" short and distinct from relays.
 
 #routes = [
-#  { server_name='safesurfer-dnscrypt', via=['sdns://gRIxNDQuOTEuMTA2LjIyNzo0NDM'] }
+#  { server_name='cloudflare-malware', via=['sdns://gRIxNDQuOTEuMTA2LjIyNzo0NDM'] }
 #]
 
 
@@ -695,5 +695,5 @@ skip_incompatible = false
 
 [static]
 
-[static.'safesurfer-dnscrypt']
-stamp = 'sdns://AQMAAAAAAAAADjEwNC4xOTcuMjguMTIxICcgf9USBOg2e0g0AF35_9HTC74qnDNjnm7b-K7ZHUDYIDIuZG5zY3J5cHQtY2VydC5zYWZlc3VyZmVyLmNvLm56'
+#[static.'cloudflare-malware']
+#stamp = 'sdns://AgMAAAAAAAAABzEuMC4wLjIbc2VjdXJpdHkuY2xvdWRmbGFyZS1kbnMuY29tCi9kbnMtcXVlcnk'
